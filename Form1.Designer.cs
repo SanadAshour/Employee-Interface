@@ -1,4 +1,4 @@
-﻿namespace EmpInt
+namespace EmpInt
 {
     partial class Form1
     {
@@ -43,20 +43,30 @@
             DatePicker = new DateTimePicker();
             salaryTB = new TextBox();
             ofd = new OpenFileDialog();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            label1 = new Label();
+            label2 = new Label();
+            groupBox3 = new GroupBox();
+            groupBox4 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // pic
             // 
-            pic.Location = new Point(614, 22);
+            pic.Location = new Point(6, 26);
             pic.Name = "pic";
-            pic.Size = new Size(125, 143);
+            pic.Size = new Size(267, 185);
             pic.TabIndex = 0;
             pic.TabStop = false;
             // 
             // idTB
             // 
-            idTB.Location = new Point(38, 34);
+            idTB.Location = new Point(16, 35);
             idTB.Name = "idTB";
             idTB.PlaceholderText = "ID";
             idTB.Size = new Size(125, 27);
@@ -64,7 +74,7 @@
             // 
             // nameTB
             // 
-            nameTB.Location = new Point(38, 84);
+            nameTB.Location = new Point(16, 68);
             nameTB.Name = "nameTB";
             nameTB.PlaceholderText = "NAME";
             nameTB.Size = new Size(125, 27);
@@ -72,7 +82,7 @@
             // 
             // emailTB
             // 
-            emailTB.Location = new Point(38, 138);
+            emailTB.Location = new Point(16, 101);
             emailTB.Name = "emailTB";
             emailTB.PlaceholderText = "E-MAIL";
             emailTB.Size = new Size(125, 27);
@@ -81,7 +91,7 @@
             // maleRB
             // 
             maleRB.AutoSize = true;
-            maleRB.Location = new Point(22, 253);
+            maleRB.Location = new Point(158, 38);
             maleRB.Name = "maleRB";
             maleRB.Size = new Size(63, 24);
             maleRB.TabIndex = 4;
@@ -92,7 +102,7 @@
             // femaleRB
             // 
             femaleRB.AutoSize = true;
-            femaleRB.Location = new Point(112, 253);
+            femaleRB.Location = new Point(253, 38);
             femaleRB.Name = "femaleRB";
             femaleRB.Size = new Size(78, 24);
             femaleRB.TabIndex = 5;
@@ -102,9 +112,9 @@
             // 
             // LeftBtn
             // 
-            LeftBtn.Location = new Point(630, 215);
+            LeftBtn.Location = new Point(36, 259);
             LeftBtn.Name = "LeftBtn";
-            LeftBtn.Size = new Size(32, 29);
+            LeftBtn.Size = new Size(79, 29);
             LeftBtn.TabIndex = 6;
             LeftBtn.Text = "<";
             LeftBtn.UseVisualStyleBackColor = true;
@@ -112,9 +122,9 @@
             // 
             // rightBtn
             // 
-            rightBtn.Location = new Point(692, 215);
+            rightBtn.Location = new Point(165, 259);
             rightBtn.Name = "rightBtn";
-            rightBtn.Size = new Size(32, 29);
+            rightBtn.Size = new Size(79, 29);
             rightBtn.TabIndex = 7;
             rightBtn.Text = ">";
             rightBtn.UseVisualStyleBackColor = true;
@@ -122,9 +132,9 @@
             // 
             // updateBtn
             // 
-            updateBtn.Location = new Point(239, 371);
+            updateBtn.Location = new Point(26, 22);
             updateBtn.Name = "updateBtn";
-            updateBtn.Size = new Size(94, 29);
+            updateBtn.Size = new Size(215, 29);
             updateBtn.TabIndex = 8;
             updateBtn.Text = "UPDATE";
             updateBtn.UseVisualStyleBackColor = true;
@@ -132,9 +142,9 @@
             // 
             // newBtn
             // 
-            newBtn.Location = new Point(377, 371);
+            newBtn.Location = new Point(262, 22);
             newBtn.Name = "newBtn";
-            newBtn.Size = new Size(94, 29);
+            newBtn.Size = new Size(215, 29);
             newBtn.TabIndex = 9;
             newBtn.Text = "NEW";
             newBtn.UseVisualStyleBackColor = true;
@@ -142,9 +152,9 @@
             // 
             // browseBtn
             // 
-            browseBtn.Location = new Point(630, 171);
+            browseBtn.Location = new Point(36, 222);
             browseBtn.Name = "browseBtn";
-            browseBtn.Size = new Size(94, 29);
+            browseBtn.Size = new Size(208, 29);
             browseBtn.TabIndex = 10;
             browseBtn.Text = "BROWSE";
             browseBtn.UseVisualStyleBackColor = true;
@@ -152,9 +162,9 @@
             // 
             // deleteBtn
             // 
-            deleteBtn.Location = new Point(530, 371);
+            deleteBtn.Location = new Point(492, 22);
             deleteBtn.Name = "deleteBtn";
-            deleteBtn.Size = new Size(94, 29);
+            deleteBtn.Size = new Size(225, 29);
             deleteBtn.TabIndex = 11;
             deleteBtn.Text = "DELETE";
             deleteBtn.UseVisualStyleBackColor = true;
@@ -162,14 +172,14 @@
             // 
             // DatePicker
             // 
-            DatePicker.Location = new Point(38, 319);
+            DatePicker.Location = new Point(131, 75);
             DatePicker.Name = "DatePicker";
-            DatePicker.Size = new Size(250, 27);
+            DatePicker.Size = new Size(219, 27);
             DatePicker.TabIndex = 12;
             // 
             // salaryTB
             // 
-            salaryTB.Location = new Point(38, 195);
+            salaryTB.Location = new Point(16, 134);
             salaryTB.Name = "salaryTB";
             salaryTB.PlaceholderText = "SALARY";
             salaryTB.Size = new Size(125, 27);
@@ -179,31 +189,96 @@
             // 
             ofd.FileName = "openFileDialog1";
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(idTB);
+            groupBox1.Controls.Add(salaryTB);
+            groupBox1.Controls.Add(nameTB);
+            groupBox1.Controls.Add(emailTB);
+            groupBox1.Location = new Point(22, 18);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(350, 182);
+            groupBox1.TabIndex = 14;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Employee Information";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(maleRB);
+            groupBox2.Controls.Add(femaleRB);
+            groupBox2.Controls.Add(DatePicker);
+            groupBox2.Location = new Point(22, 224);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(376, 125);
+            groupBox2.TabIndex = 15;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Additional Information";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(16, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 20);
+            label1.TabIndex = 13;
+            label1.Text = "Gender:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(16, 80);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 20);
+            label2.TabIndex = 14;
+            label2.Text = "Date Of Birth:";
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(updateBtn);
+            groupBox3.Controls.Add(newBtn);
+            groupBox3.Controls.Add(deleteBtn);
+            groupBox3.Location = new Point(22, 368);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(725, 57);
+            groupBox3.TabIndex = 16;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Actions";
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(pic);
+            groupBox4.Controls.Add(LeftBtn);
+            groupBox4.Controls.Add(rightBtn);
+            groupBox4.Controls.Add(browseBtn);
+            groupBox4.Location = new Point(466, 36);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(281, 313);
+            groupBox4.TabIndex = 17;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Profile";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(salaryTB);
-            Controls.Add(DatePicker);
-            Controls.Add(deleteBtn);
-            Controls.Add(browseBtn);
-            Controls.Add(newBtn);
-            Controls.Add(updateBtn);
-            Controls.Add(rightBtn);
-            Controls.Add(LeftBtn);
-            Controls.Add(femaleRB);
-            Controls.Add(maleRB);
-            Controls.Add(emailTB);
-            Controls.Add(nameTB);
-            Controls.Add(idTB);
-            Controls.Add(pic);
+            Controls.Add(groupBox4);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -223,5 +298,11 @@
         private DateTimePicker DatePicker;
         private TextBox salaryTB;
         private OpenFileDialog ofd;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private Label label2;
+        private Label label1;
+        private GroupBox groupBox3;
+        private GroupBox groupBox4;
     }
 }
