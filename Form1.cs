@@ -15,6 +15,20 @@ namespace EmpInt
         CurrencyManager cm;
         SqlCommandBuilder cmdb;
 
+        private void PositionChanged(object sender, EventArgs e)
+        {
+            DataRowView current = (DataRowView)cm.Current;
+            if (current["gender"].ToString() == "Male")
+            {
+                maleRB.Checked = true;
+            }
+            else
+            {
+                femaleRB.Checked = true;
+            }
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -22,15 +36,21 @@ namespace EmpInt
                 da = new SqlDataAdapter("Select * from info", con);
                 ds.Clear();
                 da.Fill(ds, "info");
+                this.BindingContext[ds.Tables["info"]].PositionChanged += new EventHandler(PositionChanged);
                 cm = (CurrencyManager)BindingContext[ds.Tables["info"]];
                 idTB.DataBindings.Add("text", ds.Tables["info"], "id");
                 nameTB.DataBindings.Add("text", ds.Tables["info"], "name");
                 emailTB.DataBindings.Add("text", ds.Tables["info"], "email");
-                salaryTB.DataBindings.Add("text", ds.Tables["info"], "salary");
-                maleRB.DataBindings.Add("text", ds.Tables["info"], "gender");
-                femaleRB.DataBindings.Add("text", ds.Tables["info"], "gender");
-                DatePicker.DataBindings.Add("text", ds.Tables["info"], "date");
+                salaryTB.DataBindings.Add("text", ds.Tables["info"], "salary");              
+                DatePicker.DataBindings.Add("Text", ds.Tables["info"], "dt");
                 pic.DataBindings.Add(new Binding("image", ds.Tables["info"], "img", true));
+
+                if (ds.Tables["info"].Rows.Count == 0)
+                {
+                    cm.AddNew();
+                    maleRB.Checked = false;
+                    femaleRB.Checked = false;
+                }
             }
             catch (Exception ex)
             {
@@ -41,11 +61,14 @@ namespace EmpInt
         private void newBtn_Click(object sender, EventArgs e)
         {
             cm.AddNew();
+            maleRB.Checked = false;
+            femaleRB.Checked = false;
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             ds.Tables[0].Rows[cm.Position].Delete();
+            MessageBox.Show("EMPLOYEE DELETED SUCCESSFULLY!", "DELETE", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void LeftBtn_Click(object sender, EventArgs e)
@@ -60,9 +83,21 @@ namespace EmpInt
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
+            DataRowView current = (DataRowView)cm.Current;
+            if (maleRB.Checked)
+            {
+                current["gender"] = "Male";
+            }
+            else if (femaleRB.Checked)
+            {
+                current["gender"] = "Female";
+            }
+
             cm.EndCurrentEdit();
             cmdb = new SqlCommandBuilder(da);
             da.Update(ds, "info");
+            MessageBox.Show("EMPLOYEE ADDED!","INSERTION SUCCESSFUL!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            
         }
 
         private void browseBtn_Click(object sender, EventArgs e)
