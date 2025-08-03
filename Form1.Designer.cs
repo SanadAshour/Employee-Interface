@@ -28,6 +28,7 @@ namespace EmpInt
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pic = new PictureBox();
             idTB = new TextBox();
             nameTB = new TextBox();
@@ -45,8 +46,8 @@ namespace EmpInt
             ofd = new OpenFileDialog();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            label1 = new Label();
             label2 = new Label();
+            label1 = new Label();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
@@ -191,6 +192,8 @@ namespace EmpInt
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = SystemColors.Window;
+            groupBox1.BackgroundImage = (Image)resources.GetObject("groupBox1.BackgroundImage");
             groupBox1.Controls.Add(idTB);
             groupBox1.Controls.Add(salaryTB);
             groupBox1.Controls.Add(nameTB);
@@ -204,6 +207,8 @@ namespace EmpInt
             // 
             // groupBox2
             // 
+            groupBox2.BackColor = SystemColors.Window;
+            groupBox2.BackgroundImage = (Image)resources.GetObject("groupBox2.BackgroundImage");
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(maleRB);
@@ -216,15 +221,6 @@ namespace EmpInt
             groupBox2.TabStop = false;
             groupBox2.Text = "Additional Information";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(16, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 20);
-            label1.TabIndex = 13;
-            label1.Text = "Gender:";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -234,8 +230,19 @@ namespace EmpInt
             label2.TabIndex = 14;
             label2.Text = "Date Of Birth:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(16, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 20);
+            label1.TabIndex = 13;
+            label1.Text = "Gender:";
+            // 
             // groupBox3
             // 
+            groupBox3.BackColor = SystemColors.Window;
+            groupBox3.BackgroundImage = (Image)resources.GetObject("groupBox3.BackgroundImage");
             groupBox3.Controls.Add(updateBtn);
             groupBox3.Controls.Add(newBtn);
             groupBox3.Controls.Add(deleteBtn);
@@ -248,6 +255,8 @@ namespace EmpInt
             // 
             // groupBox4
             // 
+            groupBox4.BackColor = SystemColors.Window;
+            groupBox4.BackgroundImage = (Image)resources.GetObject("groupBox4.BackgroundImage");
             groupBox4.Controls.Add(pic);
             groupBox4.Controls.Add(LeftBtn);
             groupBox4.Controls.Add(rightBtn);
@@ -263,13 +272,14 @@ namespace EmpInt
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "EMPLOYEE INTERFACE";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
             groupBox1.ResumeLayout(false);
