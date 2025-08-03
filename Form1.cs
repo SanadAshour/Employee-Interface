@@ -52,7 +52,7 @@ namespace EmpInt
                 idTB.DataBindings.Add("text", ds.Tables["info"], "id");
                 nameTB.DataBindings.Add("text", ds.Tables["info"], "name");
                 emailTB.DataBindings.Add("text", ds.Tables["info"], "email");
-                salaryTB.DataBindings.Add("text", ds.Tables["info"], "salary");              
+                salaryTB.DataBindings.Add("text", ds.Tables["info"], "salary");
                 DatePicker.DataBindings.Add("Text", ds.Tables["info"], "dt");
                 pic.DataBindings.Add(new Binding("image", ds.Tables["info"], "img", true));
 
@@ -108,17 +108,22 @@ namespace EmpInt
             cmdb = new SqlCommandBuilder(da);
             da.Update(ds, "info");
             ClearData();
-            MessageBox.Show("EMPLOYEE ADDED!","INSERTION SUCCESSFUL!",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            
+            MessageBox.Show("EMPLOYEE ADDED!", "INSERTION SUCCESSFUL!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void browseBtn_Click(object sender, EventArgs e)
         {
             ofd.Filter = "Image Jpg | *jpg";
-            if(DialogResult.OK == ofd.ShowDialog())
+            if (DialogResult.OK == ofd.ShowDialog())
             {
                 pic.Image = Image.FromFile(ofd.FileName);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //ACCIDENTALLY DOUBLE CLICKED THE LABEL
         }
     }
 }
