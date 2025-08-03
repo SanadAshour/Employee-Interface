@@ -15,6 +15,17 @@ namespace EmpInt
         CurrencyManager cm;
         SqlCommandBuilder cmdb;
 
+        private void ClearData()
+        {
+            idTB.Text = "";
+            nameTB.Text = "";
+            emailTB.Text = "";
+            salaryTB.Text = "";
+            maleRB.Checked = false;
+            femaleRB.Checked = false;
+            pic.Image = null;
+        }
+
         private void PositionChanged(object sender, EventArgs e)
         {
             DataRowView current = (DataRowView)cm.Current;
@@ -96,6 +107,7 @@ namespace EmpInt
             cm.EndCurrentEdit();
             cmdb = new SqlCommandBuilder(da);
             da.Update(ds, "info");
+            ClearData();
             MessageBox.Show("EMPLOYEE ADDED!","INSERTION SUCCESSFUL!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             
         }
