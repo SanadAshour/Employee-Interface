@@ -70,7 +70,7 @@ namespace EmpInt
             idTB.Location = new Point(16, 35);
             idTB.Name = "idTB";
             idTB.PlaceholderText = "ID";
-            idTB.Size = new Size(125, 27);
+            idTB.Size = new Size(125, 30);
             idTB.TabIndex = 1;
             // 
             // nameTB
@@ -78,7 +78,7 @@ namespace EmpInt
             nameTB.Location = new Point(16, 68);
             nameTB.Name = "nameTB";
             nameTB.PlaceholderText = "NAME";
-            nameTB.Size = new Size(125, 27);
+            nameTB.Size = new Size(125, 30);
             nameTB.TabIndex = 2;
             // 
             // emailTB
@@ -86,30 +86,32 @@ namespace EmpInt
             emailTB.Location = new Point(16, 101);
             emailTB.Name = "emailTB";
             emailTB.PlaceholderText = "E-MAIL";
-            emailTB.Size = new Size(125, 27);
+            emailTB.Size = new Size(125, 30);
             emailTB.TabIndex = 3;
             // 
             // maleRB
             // 
             maleRB.AutoSize = true;
+            maleRB.BackColor = SystemColors.InactiveCaption;
             maleRB.Location = new Point(158, 38);
             maleRB.Name = "maleRB";
-            maleRB.Size = new Size(63, 24);
+            maleRB.Size = new Size(72, 26);
             maleRB.TabIndex = 4;
             maleRB.TabStop = true;
             maleRB.Text = "Male";
-            maleRB.UseVisualStyleBackColor = true;
+            maleRB.UseVisualStyleBackColor = false;
             // 
             // femaleRB
             // 
             femaleRB.AutoSize = true;
+            femaleRB.BackColor = SystemColors.InactiveCaption;
             femaleRB.Location = new Point(253, 38);
             femaleRB.Name = "femaleRB";
-            femaleRB.Size = new Size(78, 24);
+            femaleRB.Size = new Size(93, 26);
             femaleRB.TabIndex = 5;
             femaleRB.TabStop = true;
             femaleRB.Text = "Female";
-            femaleRB.UseVisualStyleBackColor = true;
+            femaleRB.UseVisualStyleBackColor = false;
             // 
             // LeftBtn
             // 
@@ -173,9 +175,14 @@ namespace EmpInt
             // 
             // DatePicker
             // 
+            DatePicker.CalendarForeColor = SystemColors.InactiveCaption;
+            DatePicker.CalendarMonthBackground = SystemColors.InactiveCaption;
+            DatePicker.CalendarTitleBackColor = SystemColors.InactiveCaption;
+            DatePicker.CalendarTitleForeColor = SystemColors.InactiveCaption;
+            DatePicker.CalendarTrailingForeColor = SystemColors.InactiveCaption;
             DatePicker.Location = new Point(131, 75);
             DatePicker.Name = "DatePicker";
-            DatePicker.Size = new Size(219, 27);
+            DatePicker.Size = new Size(219, 30);
             DatePicker.TabIndex = 12;
             // 
             // salaryTB
@@ -183,7 +190,7 @@ namespace EmpInt
             salaryTB.Location = new Point(16, 134);
             salaryTB.Name = "salaryTB";
             salaryTB.PlaceholderText = "SALARY";
-            salaryTB.Size = new Size(125, 27);
+            salaryTB.Size = new Size(125, 30);
             salaryTB.TabIndex = 13;
             // 
             // ofd
@@ -198,6 +205,7 @@ namespace EmpInt
             groupBox1.Controls.Add(salaryTB);
             groupBox1.Controls.Add(nameTB);
             groupBox1.Controls.Add(emailTB);
+            groupBox1.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(22, 18);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(350, 182);
@@ -214,6 +222,7 @@ namespace EmpInt
             groupBox2.Controls.Add(maleRB);
             groupBox2.Controls.Add(femaleRB);
             groupBox2.Controls.Add(DatePicker);
+            groupBox2.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox2.Location = new Point(22, 224);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(376, 125);
@@ -224,18 +233,23 @@ namespace EmpInt
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.InactiveCaption;
+            label2.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(16, 80);
             label2.Name = "label2";
-            label2.Size = new Size(99, 20);
+            label2.Size = new Size(67, 22);
             label2.TabIndex = 14;
-            label2.Text = "Date Of Birth:";
+            label2.Text = "D.O.B:";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.InactiveCaption;
+            label1.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(16, 38);
             label1.Name = "label1";
-            label1.Size = new Size(60, 20);
+            label1.Size = new Size(80, 22);
             label1.TabIndex = 13;
             label1.Text = "Gender:";
             // 
@@ -246,6 +260,7 @@ namespace EmpInt
             groupBox3.Controls.Add(updateBtn);
             groupBox3.Controls.Add(newBtn);
             groupBox3.Controls.Add(deleteBtn);
+            groupBox3.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox3.Location = new Point(22, 368);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(725, 57);
@@ -261,6 +276,7 @@ namespace EmpInt
             groupBox4.Controls.Add(LeftBtn);
             groupBox4.Controls.Add(rightBtn);
             groupBox4.Controls.Add(browseBtn);
+            groupBox4.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox4.Location = new Point(466, 36);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(281, 313);
