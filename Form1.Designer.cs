@@ -61,7 +61,7 @@ namespace EmpInt
             // 
             pic.Location = new Point(6, 26);
             pic.Name = "pic";
-            pic.Size = new Size(267, 185);
+            pic.Size = new Size(267, 205);
             pic.TabIndex = 0;
             pic.TabStop = false;
             // 
@@ -70,7 +70,7 @@ namespace EmpInt
             idTB.Location = new Point(16, 35);
             idTB.Name = "idTB";
             idTB.PlaceholderText = "ID";
-            idTB.Size = new Size(125, 30);
+            idTB.Size = new Size(319, 30);
             idTB.TabIndex = 1;
             // 
             // nameTB
@@ -78,7 +78,7 @@ namespace EmpInt
             nameTB.Location = new Point(16, 68);
             nameTB.Name = "nameTB";
             nameTB.PlaceholderText = "NAME";
-            nameTB.Size = new Size(125, 30);
+            nameTB.Size = new Size(319, 30);
             nameTB.TabIndex = 2;
             // 
             // emailTB
@@ -86,7 +86,7 @@ namespace EmpInt
             emailTB.Location = new Point(16, 101);
             emailTB.Name = "emailTB";
             emailTB.PlaceholderText = "E-MAIL";
-            emailTB.Size = new Size(125, 30);
+            emailTB.Size = new Size(319, 30);
             emailTB.TabIndex = 3;
             // 
             // maleRB
@@ -115,7 +115,8 @@ namespace EmpInt
             // 
             // LeftBtn
             // 
-            LeftBtn.Location = new Point(36, 259);
+            LeftBtn.FlatStyle = FlatStyle.System;
+            LeftBtn.Location = new Point(36, 286);
             LeftBtn.Name = "LeftBtn";
             LeftBtn.Size = new Size(79, 29);
             LeftBtn.TabIndex = 6;
@@ -125,7 +126,8 @@ namespace EmpInt
             // 
             // rightBtn
             // 
-            rightBtn.Location = new Point(165, 259);
+            rightBtn.FlatStyle = FlatStyle.System;
+            rightBtn.Location = new Point(165, 286);
             rightBtn.Name = "rightBtn";
             rightBtn.Size = new Size(79, 29);
             rightBtn.TabIndex = 7;
@@ -135,6 +137,7 @@ namespace EmpInt
             // 
             // updateBtn
             // 
+            updateBtn.FlatStyle = FlatStyle.System;
             updateBtn.Location = new Point(26, 22);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(215, 29);
@@ -145,6 +148,7 @@ namespace EmpInt
             // 
             // newBtn
             // 
+            newBtn.FlatStyle = FlatStyle.System;
             newBtn.Location = new Point(262, 22);
             newBtn.Name = "newBtn";
             newBtn.Size = new Size(215, 29);
@@ -155,7 +159,8 @@ namespace EmpInt
             // 
             // browseBtn
             // 
-            browseBtn.Location = new Point(36, 222);
+            browseBtn.FlatStyle = FlatStyle.System;
+            browseBtn.Location = new Point(36, 243);
             browseBtn.Name = "browseBtn";
             browseBtn.Size = new Size(208, 29);
             browseBtn.TabIndex = 10;
@@ -165,6 +170,7 @@ namespace EmpInt
             // 
             // deleteBtn
             // 
+            deleteBtn.FlatStyle = FlatStyle.System;
             deleteBtn.Location = new Point(492, 22);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(225, 29);
@@ -190,7 +196,7 @@ namespace EmpInt
             salaryTB.Location = new Point(16, 134);
             salaryTB.Name = "salaryTB";
             salaryTB.PlaceholderText = "SALARY";
-            salaryTB.Size = new Size(125, 30);
+            salaryTB.Size = new Size(319, 30);
             salaryTB.TabIndex = 13;
             // 
             // ofd
@@ -277,9 +283,9 @@ namespace EmpInt
             groupBox4.Controls.Add(rightBtn);
             groupBox4.Controls.Add(browseBtn);
             groupBox4.Font = new Font("Britannic Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(466, 36);
+            groupBox4.Location = new Point(466, 18);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(281, 313);
+            groupBox4.Size = new Size(281, 331);
             groupBox4.TabIndex = 17;
             groupBox4.TabStop = false;
             groupBox4.Text = "Profile";
@@ -295,6 +301,7 @@ namespace EmpInt
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EMPLOYEE INTERFACE";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
